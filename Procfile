@@ -1,1 +1,1 @@
-web: gunicorn restaurant_bot:app
+web: python restaurant_bot.py
