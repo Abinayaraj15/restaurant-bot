@@ -11,7 +11,8 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"  # required for session tracking
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret")
+
 
 # --------------------------
 # HELPER FUNCTION: Check meal time
